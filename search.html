@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			html,
+			body {
+				height: 100%;
+				background: #2c276a;
+				color: #fff;
+			}
+
+			.wrapper {
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+			}
+
+			.title {
+				font-size: 36px;
+			}
+
+			.search-box {
+				width: 440px;
+				height: 44px;
+				border: 1px solid #dfe1e5;
+				border-radius: 22px;
+				margin: 16px 0;
+				background-color: #FFFFFF;
+			}
+
+			.search-box:hover {
+				box-shadow: 0 1px 6px 0 rgba(255, 255, 255, 0.28);
+				border-color: rgba(223, 225, 229, 0);
+			}
+
+			.search-box .input-wrapper {
+				height: 100%;
+				display: flex;
+				align-items: center;
+				padding: 0 8px;
+			}
+
+			.search-box .input-wrapper input {
+				width: 100%;
+				background-color: transparent;
+				border: none;
+				margin: 0;
+				padding: 0;
+				color: rgba(0, 0, 0, .87);
+				word-wrap: break-word;
+				outline: none;
+				display: flex;
+				height: 34px;
+				font-size: 16px;
+			}
+
+			.search-box .input-wrapper .search-icon {
+				width: 22px;
+				height: 22px;
+				margin-right: 16px;
+				background-image: url(../search.svg);
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+
+			.echart-box {
+				height: 400px;
+				width: 600px;
+				border: 1px solid antiquewhite;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="title">KG&QA of Bridge</div>
+			<div class="search-box">
+				<div class="input-wrapper">
+					<span class="search-icon"></span>
+					<input type="text" autocomplete="off" autofocus placeholder="請輸入關鍵字">
+				</div>
+			</div>
+			<div class="echart-box"></div>
+		</div>
+	</body>
+</html>

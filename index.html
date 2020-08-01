@@ -1,89 +1,120 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-		<style type="text/css">
-			html,
-			body {
-				height: 100%;
-				background: #2c276a;
-				color: #fff;
-			}
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        color: #fff;
+      }
 
-			.wrapper {
-				height: 100%;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				flex-direction: column;
-			}
+      .wrapper {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
 
-			.title {
-				font-size: 36px;
-			}
+      .wrapper,
+      .echart-box::before {
+        background: url('./bg.jpg') no-repeat center / cover fixed;
+      }
 
-			.search-box {
-				width: 440px;
-				height: 44px;
-				border: 1px solid #dfe1e5;
-				border-radius: 22px;
-				margin: 16px 0;
-				background-color: #FFFFFF;
-			}
+      .title {
+        font-size: 36px;
+      }
 
-			.search-box:hover {
-				box-shadow: 0 1px 6px 0 rgba(255, 255, 255, 0.28);
-				border-color: rgba(223, 225, 229, 0);
-			}
+      .search-box {
+        width: 440px;
+        height: 44px;
+        border: 1px solid #dfe1e5;
+        border-radius: 22px;
+        margin: 16px 0;
+        background-color: #ffffff;
+      }
 
-			.search-box .input-wrapper {
-				height: 100%;
-				display: flex;
-				align-items: center;
-				padding: 0 8px;
-			}
+      .search-box:hover {
+        box-shadow: 0 1px 6px 0 rgba(255, 255, 255, 0.28);
+        border-color: rgba(223, 225, 229, 0);
+      }
 
-			.search-box .input-wrapper input {
-				width: 100%;
-				background-color: transparent;
-				border: none;
-				margin: 0;
-				padding: 0;
-				color: rgba(0, 0, 0, .87);
-				word-wrap: break-word;
-				outline: none;
-				display: flex;
-				height: 34px;
-				font-size: 16px;
-			}
+      .search-box .input-wrapper {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 8px;
+      }
 
-			.search-box .input-wrapper .search-icon {
-				width: 22px;
-				height: 22px;
-				margin-right: 16px;
-				background-image: url(../search.svg);
-				background-repeat: no-repeat;
-				background-size: contain;
-			}
+      .search-box .input-wrapper input {
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        margin: 0;
+        padding: 0;
+        color: rgba(0, 0, 0, 0.87);
+        word-wrap: break-word;
+        outline: none;
+        display: flex;
+        height: 34px;
+        font-size: 16px;
+      }
 
-			.echart-box {
-				height: 400px;
-				width: 600px;
-				border: 1px solid antiquewhite;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="wrapper">
-			<div class="title">KG&QA of Bridge</div>
-			<div class="search-box">
-				<div class="input-wrapper">
-					<span class="search-icon"></span>
-					<input type="text" autocomplete="off" autofocus placeholder="請輸入關鍵字">
-				</div>
-			</div>
-			<div class="echart-box"></div>
-		</div>
-	</body>
+      .search-box .input-wrapper .search-icon {
+        width: 22px;
+        height: 22px;
+        margin-right: 16px;
+        background-image: url(./search.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      .echart-box {
+        height: 400px;
+        width: 600px;
+        z-index: 1;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        position: relative;
+      }
+
+      .echart-box::before {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: -20px;
+        filter: blur(10px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="title">KG&QA of Bridge</div>
+      <div class="search-box">
+        <div class="input-wrapper">
+          <span class="search-icon"></span>
+          <input
+            type="text"
+            autocomplete="off"
+            autofocus
+            placeholder="請輸入關鍵字"
+          />
+        </div>
+      </div>
+      <div class="echart-box">
+        <h1>title</h1>
+      </div>
+    </div>
+  </body>
 </html>
